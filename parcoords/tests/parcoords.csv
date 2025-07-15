@@ -1,0 +1,75 @@
+ID_PACIENTE,NOME,OCUPAÇÃO,SEXO,MUNICIPIO,DATA_NASC,NOME_DO_ARQUIVO,N_AVALIACOES,1,2,3,4
+0,Balbina Carneiro Rios Filha,Aposentada- Advogada/Professora,Feminino,Pau Amarelo,01/01/1948,B00004,2,0.015295870406705873,0.07310615527206728,,
+1,Benedito Francelino dos Santos,Aposentado -  Encanador,Masculino,Ibura,27/05/1958,B00005,2,6.016785655445553,4.9930890326927475,,
+2,Benivaldo Santana da Silva,Estofador,Masculino,Jaboatão,22/02/1973,B00002,2,6.013406104595838,6.043053122923825,,
+5,Carlos Antônio Correia Da Silva,Pintor ( Aposentado),Masculino,Recife,22/03/1955,C00004,1,1.9747673990219146,,,
+6,Carmen Lúcia Ribeiro Da Silva,Doméstica,Feminino,Escada,29/11/1969,C00008,1,1.9766431714871973,,,
+7,Cosme Barbosa Da Silva,Carpinteiro,Masculino,Carnaíba,16/01/1978,C00006,1,2.0589710400483923,,,
+8,Cristiane  Maria Da Conceição,Autônoma,Feminino,Ipojuca,20/07/1988,C00010,1,-0.007526518861484835,,,
+9,Cristiane Batista Da Conceição,Agricultora,Feminino,Châ Grande,09/04/1979,C00005,1,1.943903576508671,,,
+10,Cristiane Josefa Da Silva Santos,Agricultora,Feminino,Passira,21/02/1984,C00007,1,0.05884977055913009,,,
+11,Cristiane Maria De Araújo Silva,Do Lar,Feminino,Tracunhaém,25/10/1979,C00009,2,0.025197917147317502,0.07943710641212996,,
+12,Cristiano Da Silva,Shaipe,Masculino,Jaboatão Dos Guararapes,03/05/1980,C00002,12,0.0027103070398143206,-0.04366711098969641,0.03501128602458747,-0.05524557577095143
+13,Cícera Aparecida Barbosa,Do Lar,Feminino,São Benedito do Sul,21/05/1967,C00015,5,1.9979757778840028,1.9939866947171194,0.04292177072700161,2.065217860041472
+14,Cícero Dos Santos Silva,Agricultor,Masculino,Araripina,20/03/1967,C00011,1,2.014333686138943,,,
+15,Cícero Inocêncio Da Silva,Agricultor,Masculino,Châ Grande,01/12/1969,C00013,4,3.0121168595296037,5.98612438529491,5.973122122024421,6.044987472128799
+16,Daniela Martins Barbosa Da Silva,Fioterapeuta,Feminino,Recife,21/12/1978,D00008,2,-0.0078099151913488115,0.01116172898417133,,
+17,Darcy Maria Da Silva Tavares,Do Lar,Feminino,Jaboatão,21/06/1969,D00001,4,,,,-0.011731203326124453
+18,Darlenne Polyane De Souza Coutinho,Estudante,Feminino,Recife,16/02/1991,D00005,1,-0.0121616866150626,,,
+19,Davi Miguel Romero Silva,Estudante,Masculino,Olinda,18/11/2014,D00009,4,-0.0032788222180663903,0.06359141855539872,-0.02034661731077748,0.11119586243275192
+20,David Lima De Morais,Pintor,Masculino,São Lourenço,05/08/1957,D00003,3,1.9510882893305102,1.0482785011436895,-0.07659937221028905,
+21,David Pedro Gomes,Serralheiro,Masculino,São Lourenço,09/07/1985,D00006,3,-0.02167905688603952,0.9979753875473437,-0.013971906085674153,
+22,Denise Da Silva Melo,Enfermeira,Feminino,Camaragiibe,17/04/1988,D00007,3,0.1367176675116759,-0.06694481907250034,-0.009079735952692933,
+23,Diomar Maria De Santana,Do Lar,Feminino,São Lourenço,07//03/1974,D00004,3,-0.020511168306835168,-0.12272261957556203,-0.009947337395919789,
+24,Djalma José Da Rocha,Lixador,Masculino,Srinhaen,07/10/1979,D00002,2,4.072905554741347,4.898213719849813,,
+25,Edielson Zavier Da Silva,Pedreiro,Masculino,Paulista,,E00016,4,1.01722144864111,1.9312357530821558,2.0244159851399943,2.0461804234052714
+26,Edilson Feliciano Da Silva,Estoquista,Masculino,Passira,23/03/1972,E00029,2,-0.03235200957989634,,,
+27,Edilson Feliciano Da sIlva,Estoquista,Masculino,Passira,23/03/1972,E00004,3,-0.050943250950084076,-0.03816625589198019,0.02764890009056308,
+28,Edjano Luiz Da Silva,Agricultor,Masculino,Águas Belas,29/02/1984,E00007,5,1.066669103868793,,0.963974724989068,1.052446685783274
+29,Ednaldo Maia De Lima,Desempregado,Masculino,Recife,27/03/1976,E00008,1,4.958377320182157,,,
+31,Edson Maquine De Andrade Lima,Aposentado,Masculino,Jaboatão,26/06/1959,E00009,1,0.06883211618482868,,,
+32,Edson Mendes Da Silva,Serviços Gerais,Masculino,Socorro,14/05/1986,E00027,2,-0.04197771374193398,0.08698471189327815,,
+33,Eduardo José Da Silva,Serviços Gerais,Masculino,Itamaracá,03/04/1969,E00005,2,5.953451448298073,4.0215070816034135,,
+34,Eduardo José Da Silva,Serviços Gerais,Masculino,Itamaracá,03/04/1969,E00019,3,6.043262912285378,4.9546180073199215,1.9569367002699043,
+35,Edvaldo Rogério De Mendonça,Pescador,Masculino,Recife,17/08/1970,E00011,1,0.02669542702719443,,,
+36,Eliel José Da Silva Júnior,Fiscal Rodoviário,Masculino,Moreno,11/05/1996,E00020,2,-0.19509329200335035,0.08157558395368057,,
+37,Eraldo Da Silva Araujo,Agricultor,Masculino,Orobó,31/10/1992,E00012,1,0.05015604163873372,,,
+38,Eraldo Da Silva Gomes,Frentista,Masculino,Sallgueiro,11/02/1973,E00014,4,0.05092837635262004,0.0498081234024654,1.0028498970125306,0.04606210236892142
+39,Ernando Trajando De Melo,Agricultor,Masculino,Quipapá,16/02/1959,E00026,11,,3.9961949986283005,1.92669216073871,1.9516285902675439
+40,Eronita Josefa De Vasconcelos,Doméstica,Feminino,Jaboatão Dos Guararapes,23/11/1963,E00017,7,4.016149364085511,4.036274608167943,1.0295533646671156,3.063873844732793
+41,Ester Adacya Souza Fortunato,Estudante,Feminino,Olinda,15/12/2011,E00021,3,-0.01578899106317875,0.03606890022064838,0.06078225614122887,
+42,Eudes Dantas De Melo,Motorista,Masculino,Jaboatão Dos Guararapes,25/11/1967,E00001,1,0.9620830643624373,,,
+43,Eveline Vitória Queiroz Da Silva,Estudante,Feminino,Belo Jardim,03/08/2012,E00015,4,0.10950882967695869,-0.024440260144559224,0.04281105697170411,0.03495663340274941
+44,Everaldo Perreira De Lima,Padeiro,Masculino,Jaboatão,15/12/1970,E00010,1,-0.029517657828064883,,,
+45,Ewerton Diego Ferreira Filho,Consultor de vendas,Masculino,Igarassu,27/11/1984,E00002,1,0.9865532692577784,,,
+46,Fabiana Carla Almeida Ferreira,Empregada Doméstica,Feminino,Recife,25/06/1980,F00001,1,1.037840520237257,,,
+47,Fabio Mendes da Silva,Marceneiro,Masculino,Camaragibe,07/06/1970,F00005,4,0.9826173302304,0.02495652237510565,0.022161011189448254,-0.053361174597818375
+48,Fabíola Maria Santos,Recepcionista,Feminino,Escada,22/05/1986,F00004,1,1.058414695005105,,,
+49,Felipe Kauã Batista Da Silva,Estudante,Masculino,Jaboatão Dos Guararapes,16/06/2008,F00010,1,1.0548189486777015,,,
+50,Fernando Manoel Florêncio,Repositor,Masculino,Pombos,17/03/1981,F00006,1,1.0228481117333703,,,
+51,Flávia Jamyle Lopes Da Silva,Estudante,Feminino,Araripina,07/12/2006,F00002,2,0.07417843999643632,-0.040471492339795856,,
+52,Flávia Rodrigues Da Silva,Desempregada,Feminino,Recife,07/02/1980,F00008,12,6.069509248601384,6.013570813813069,5.990439811280353,6.00323199796555
+53,Francisco Antonio Da Silva,Lavador de Carro,Masculino,Araripina,04/11/1978,F00003,3,3.0321534050384056,1.9638904613965267,1.9481228361137766,
+54,Francisco Carlos dos Anjos,Aposentado,Masculino,Salgueiro,10/09/1987,F00007,2,1.0159042519097523,3.007150432968496,,
+55,Geonísio José Da Silva,Aposentado,Masculino,Recife,14/07/1956,G00003,1,0.10126568111270827,,,
+56,Gerson Batista Lopes,Engenheiro Agrônomo,Masculino,Araripina,16/10/1966,G00004,2,2.011478201365213,1.0230420158346583,,
+57,Gerson Sebastião André Da Silva,Cortador de Cana,Masculino,Chã de Alegria,30/11/1979,G00001,8,-0.05621123280893092,0.07137710371857572,-0.023771999600058914,1.8963710193039252
+58,Gilberto Guilhermino Da Silva,Sem Atividade Remunerada,Masculino,Recife,08/04/1965,G00009,6,1.0429294225190584,1.0195491521231452,-0.014418947355325465,1.0213284318467541
+59,Gilberto Inácio Da Silva,Marceneiro,Masculino,Itamaracá,18/09/1956,G00008,2,1.0092538294369082,1.0348479567296625,,
+60,Gilberto Vitorino Dos Santos,Aposentado,Masculino,Gravatá,15/11/1968,G00011,2,5.040867631337368,4.999635235793644,,
+61,Gilneide Maria Da Silva,Do Lar,Feminino,Vicência,31/05/1984,G00012,1,0.003508085024201789,,,
+62,Gilson Ricardo Da Silva,Comerciante,Masculino,Recife,20/08/1982,G00013,1,5.991321814191068,,,
+63,Gisonita Amara Da Silva,Cuidadora De Idosos,Feminino,Jaboatão Dos Guararapes,21/04/1984,G00014,2,0.945828099869188,0.03981535095228983,,
+64,Givaldo Raimundo Do Nascimento,Repositor,Masculino,Bom Jardim,27/03/1981,G00015,2,-0.027636478139709847,0.050912160661740084,,
+65,Guttemberg De Freitas Bandeira,Carreteiro,Masculino,Jaboatão,17/07/1981,G00016,1,0.9804350827476715,,,
+66,Homero De Almeida Fonseca,Técnico em Mecânica,Masculino,Jaboatão,11/11/1954,H00001,1,1.9709548744861805,,,
+67,Iris Maria Da Silva,Agricultora,Feminino,Passira,06/02/1965,I00001,2,2.0282561110400006,1.9988942231929017,,
+68,Ismael Barreto De Farias,Operador De Caixa,Masculino,Jaboatão Dos Guararapes,30/10/1975,I00002,4,0.06448978964582823,-0.05153076957827762,-0.02546505690388033,0.03319939427120195
+69,Israel De Oliveira Rego,Eletricista,Masculino,Jaboatão Dos Guararapes,07/01/1988,I00003,2,-0.019541367500644592,3.0371387157872647,,
+70,Issac Pires Bezerra Da Silva,Estudante,Masculino,Jaboatão Dos Guararapes,07/08/2007,I00004,1,1.034623686600465,,,
+71,Itamar do Nascimento Fernandes,Serviços Gerais,Masculino,Moreno,30/10/1997,I00005,3,,0.02980950005382474,,
+72,Ivan Honório Frazão,Pedreiro,Masculino,Serra Talhada,17/08/1974,I00006,2,1.0469368344539254,1.9491494005052916,,
+73,Ivaneide Ferreira Cosme,Aposentada,Feminino,Recife,07/08/1959,I00007,1,2.0448099107041036,,,
+74,Izaque Pedro Da Silva,Agricultor,Masculino,Chã Grande,07/10/1989,I00008,3,-0.025939035000531352,0.01870506526144637,-0.04409846659511407,
+75,Jacione De Oliveira Saraiva,Professora,Feminino,Recife,25/07/1977,J00001,1,0.04969646098356179,,,
+76,José Mariano Da Silva Filho,Aposentado,Masculino,Jaboatão,01/08/1947,J00002,5,0.0428326409509976,,,0.9593238775220787

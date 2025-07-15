@@ -1,0 +1,11 @@
+include parcoords/parcoords.min.js
+include parcoords/parcoords.min.js.map
+include parcoords/async-*.js
+include parcoords/async-*.js.map
+include parcoords/*-shared.js
+include parcoords/*-shared.js.map
+include parcoords/metadata.json
+include parcoords/package-info.json
+include README.md
+include LICENSE
+include package.json
