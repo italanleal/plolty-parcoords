@@ -1,9 +1,9 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
 #' @export
-''Parallel <- function(id=NULL, color_encode_columns=NULL, data=NULL, height=NULL, line=NULL, selectedPath=NULL, width=NULL) {
+''Parallel <- function(id=NULL, color_encode_column=NULL, data=NULL, do_color=NULL, height=NULL, line=NULL, margin=NULL, ordinal_scale=NULL, width=NULL) {
     
-    props <- list(id=id, color_encode_columns=color_encode_columns, data=data, height=height, line=line, selectedPath=selectedPath, width=width)
+    props <- list(id=id, color_encode_column=color_encode_column, data=data, do_color=do_color, height=height, line=line, margin=margin, ordinal_scale=ordinal_scale, width=width)
     if (length(props) > 0) {
         props <- props[!vapply(props, is.null, logical(1))]
     }
@@ -11,7 +11,7 @@
         props = props,
         type = 'Parallel',
         namespace = 'parcoords',
-        propNames = c('id', 'color_encode_columns', 'data', 'height', 'line', 'selectedPath', 'width'),
+        propNames = c('id', 'color_encode_column', 'data', 'do_color', 'height', 'line', 'margin', 'ordinal_scale', 'width'),
         package = 'parcoords'
         )
 

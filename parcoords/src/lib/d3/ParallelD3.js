@@ -1,20 +1,31 @@
 import * as d3 from "d3";
 
 export default class ParallelD3 {
-    constructor(el, options = {}) {
+    constructor(el, props = {}) {
         this.el = el;
-        this.margin = { top: 30, right: 10, bottom: 100, left: 10 };
-        this.width = options.width || 800 - this.margin.left - this.margin.right;
-        this.height = options.height || 300 - this.margin.top - this.margin.bottom;
-        this.inputList = options.inputList || ["SEXO", "N_AVALIACOES"];
-        this.selectedColumn = "";
-        this.lineSelected = null;
+        this.margin = props.margin;
+        this.width = props.width - this.margin.left - this.margin.right;
+        this.height = props.height - this.margin.top - this.margin.bottom;
+        this.do_color = props.do_color;
+        this.ordinal_scale = props.ordinal_scale;
+        this.color_encode_column = props.color_encode_column;
+        this.setProps = props.setProps;
+
+        this.update(props)
+    }
+
+    setLine(line) {
+        this.setProps({ line: line });
+    }
+
+    update(props) {
         this._init();
-        this.draw(options.data);
+        this.draw(props.data);
     }
 
     _init() {
         d3.select(this.el).selectAll("*").remove();
+        if(this.tooltip) this.tooltip.remove();
 
         this.svg = d3.select(this.el)
             .append("svg")
@@ -37,10 +48,6 @@ export default class ParallelD3 {
             .style("display", "none");
     }
 
-    setSelectedColumn(col) {
-        this.selectedColumn = col;
-    }
-
     draw(data) {
         const self = this;
         const { width: w, height: h } = self;
@@ -61,12 +68,11 @@ export default class ParallelD3 {
             y[col] = d3.scaleLinear().domain([0, 6]).range([h, 0]);
         }
 
-        const isNumericColumn = self.selectedColumn &&
-            !isNaN(+data.find(d => d[self.selectedColumn] !== "" && d[self.selectedColumn] != null)?.[self.selectedColumn]);
+        const isNumericColumn = self.ordinal_scale
 
         let colorScale;
-        if (self.selectedColumn) {
-            const values = data.map(d => d[self.selectedColumn]).filter(d => d !== "" && d != null);
+        if (self.do_color) {
+            const values = data.map(d => d[self.color_encode_column]).filter(d => d !== "" && d != null);
             if (isNumericColumn) {
                 const extent = d3.extent(values, v => +v);
                 colorScale = d3.scaleSequential(d3.interpolatePlasma).domain(extent);
@@ -75,7 +81,7 @@ export default class ParallelD3 {
                 colorScale = d3.scaleOrdinal(d3.schemeCategory10).domain(categories);
             }
         } else {
-            colorScale = () => "#69b3a2";
+            colorScale = (d) => "#962ef8ff";
         }
 
         function path(d) {
@@ -97,7 +103,7 @@ export default class ParallelD3 {
             .enter().append("path")
             .attr("d", path)
             .style("fill", "none")
-            .style("stroke", d => self.selectedColumn ? colorScale(d[self.selectedColumn]) : "#9031d9ff")
+            .style("stroke", d => colorScale(d[self.color_encode_column]))
             .style("opacity", 0.44)
             .on("mouseover", function (event, d) {
                 d3.select(event.currentTarget)
@@ -113,14 +119,14 @@ export default class ParallelD3 {
             })
             .on("mouseout", function (event, d) {
                 d3.select(event.currentTarget)
-                    .style("stroke", self.selectedColumn ? colorScale(d[self.selectedColumn]) : "#9031d9ff")
+                    .style("stroke", colorScale(d[self.color_encode_column]))
                     .style("stroke-width", 1)
                     .style("opacity", 0.5);
 
                 self.tooltip.style("display", "none");
             })
             .on("click", (event, d) => {
-                self.lineSelected = d;
+                self.setLine(d);
             });
 
         svg.selectAll("axis-parallel")

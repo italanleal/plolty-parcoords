@@ -10,22 +10,32 @@ ExampleComponent is an example component. It takes a property, `label`, and di
 }
 
 \usage{
-''Parallel(id=NULL, color_encode_columns=NULL, data=NULL, height=NULL,
-line=NULL, selectedPath=NULL, width=NULL)
+''Parallel(id=NULL, color_encode_column=NULL, data=NULL, do_color=NULL,
+height=NULL, line=NULL, margin=NULL, ordinal_scale=NULL,
+width=NULL)
 }
 
 \arguments{
 \item{id}{Character. The ID used to identify this component in Dash callbacks.}
 
-\item{color_encode_columns}{List of characters. }
+\item{color_encode_column}{Character. }
 
 \item{data}{List of named lists. }
+
+\item{do_color}{Logical. }
 
 \item{height}{Numeric. }
 
 \item{line}{Named list. }
 
-\item{selectedPath}{List of characters. }
+\item{margin}{Lists containing elements 'top', 'right', 'bottom', 'left'.
+those elements have the following types:
+  - top (numeric; optional)
+  - right (numeric; optional)
+  - bottom (numeric; optional)
+  - left (numeric; optional). }
+
+\item{ordinal_scale}{Logical. }
 
 \item{width}{Numeric. }
 }
