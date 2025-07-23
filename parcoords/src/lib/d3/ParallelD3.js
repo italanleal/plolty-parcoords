@@ -11,7 +11,7 @@ export default class ParallelD3 {
         this.color_encode_column = props.color_encode_column;
         this.setProps = props.setProps;
 
-        this.update(props)
+        this.update(props);
     }
 
     setLine(line) {
@@ -25,7 +25,7 @@ export default class ParallelD3 {
 
     _init() {
         d3.select(this.el).selectAll("*").remove();
-        if(this.tooltip) this.tooltip.remove();
+        if (this.tooltip) this.tooltip.remove();
 
         this.svg = d3.select(this.el)
             .append("svg")
@@ -62,13 +62,13 @@ export default class ParallelD3 {
             return typeof d_ === "number" && d_ <= 4;
         });
 
-        const x = d3.scalePoint().range([0, w]).padding(1).domain(dimensions);
+        const x = d3.scalePoint().range([0, w]).padding(0.25).domain(dimensions);
         const y = {};
         for (let col of dimensions) {
             y[col] = d3.scaleLinear().domain([0, 6]).range([h, 0]);
         }
 
-        const isNumericColumn = self.ordinal_scale
+        const isNumericColumn = self.ordinal_scale;
 
         let colorScale;
         if (self.do_color) {
@@ -81,32 +81,71 @@ export default class ParallelD3 {
                 colorScale = d3.scaleOrdinal(d3.schemeCategory10).domain(categories);
             }
         } else {
-            colorScale = (d) => "#962ef8ff";
+            colorScale = () => "#962ef8ff";
         }
 
-        function path(d) {
-            const line = [];
-            for (let p of dimensions) {
-                const val = d[p];
+        const lines = svg.selectAll("g.line-group")
+            .data(data, d => d.ID_PACIENTE)
+            .enter()
+            .append("g")
+            .attr("class", "line-group");
+
+        lines.each(function (d) {
+            const group = d3.select(this);
+            const segments = [];
+            let lastValidPoint = null;
+
+            for (let i = 0; i < dimensions.length; i++) {
+                const dim = dimensions[i];
+                const val = d[dim];
+
                 if (val === "" || val == null) {
-                    line.push([x(p), missingY]);
-                    break;
+                    if (lastValidPoint) {
+                        segments.push({
+                            points: [lastValidPoint, [x(dim), missingY]],
+                            dashed: true
+                        });
+                    }
+                    lastValidPoint = null;
+
+                    for (let j = i + 1; j < dimensions.length; j++) {
+                        const nextVal = d[dimensions[j]];
+                        if (nextVal !== "" && nextVal != null) {
+                            const nextPoint = [x(dimensions[j]), y[dimensions[j]](+nextVal)];
+                            segments.push({
+                                points: [[x(dim), missingY], nextPoint],
+                                dashed: true
+                            });
+                            lastValidPoint = nextPoint;
+                            i = j;
+                            break;
+                        }
+                    }
                 } else {
-                    line.push([x(p), y[p](+val)]);
+                    const point = [x(dim), y[dim](+val)];
+                    if (lastValidPoint) {
+                        segments.push({
+                            points: [lastValidPoint, point],
+                            dashed: false
+                        });
+                    }
+                    lastValidPoint = point;
                 }
             }
-            return d3.line()(line);
-        }
 
-        svg.selectAll("line-parallel")
-            .data(data)
-            .enter().append("path")
-            .attr("d", path)
-            .style("fill", "none")
-            .style("stroke", d => colorScale(d[self.color_encode_column]))
-            .style("opacity", 0.44)
-            .on("mouseover", function (event, d) {
-                d3.select(event.currentTarget)
+            segments.forEach(seg => {
+                group.append("path")
+                    .attr("d", d3.line()(seg.points))
+                    .attr("data-dashed", seg.dashed) // <- robust marker
+                    .style("fill", "none")
+                    .style("stroke", colorScale(d[self.color_encode_column]))
+                    .style("stroke-width", 1)
+                    .style("opacity", 0.44)
+                    .style("stroke-dasharray", seg.dashed ? "4,3" : "none");
+            });
+
+            group.on("mouseover", function (event) {
+                group.selectAll("path")
                     .style("stroke", "#ffcc00")
                     .style("stroke-width", 3)
                     .style("opacity", 1);
@@ -116,18 +155,20 @@ export default class ParallelD3 {
                     .html(`<strong>ID:</strong> ${d.ID_PACIENTE}`)
                     .style("left", (event.pageX + 10) + "px")
                     .style("top", (event.pageY - 28) + "px");
-            })
-            .on("mouseout", function (event, d) {
-                d3.select(event.currentTarget)
+            }).on("mouseout", function () {
+                group.selectAll("path")
                     .style("stroke", colorScale(d[self.color_encode_column]))
                     .style("stroke-width", 1)
-                    .style("opacity", 0.5);
+                    .style("opacity", 0.44)
+                    .style("stroke-dasharray", function () {
+                        return d3.select(this).attr("data-dashed") === "true" ? "4,3" : "none";
+                    });
 
                 self.tooltip.style("display", "none");
-            })
-            .on("click", (event, d) => {
+            }).on("click", () => {
                 self.setLine(d);
             });
+        });
 
         svg.selectAll("axis-parallel")
             .data(dimensions).enter()
